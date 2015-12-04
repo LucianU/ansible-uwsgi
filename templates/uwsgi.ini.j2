@@ -6,7 +6,6 @@ max-requests = 1000
 harakiri = 30
 post-buffering = 8192
 reaper = true
-env = DJANGO_SETTINGS_MODULE={{ uwsgi_django_settings }}
 module = {{ uwsgi_module }}
 venv = {{ uwsgi_venv }}
 uid = {{ site_app_user }}
