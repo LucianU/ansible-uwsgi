@@ -1,4 +1,11 @@
 ---
+- name: add ppa
+  apt_repository:
+    repo: 'ppa:chris-lea/uwsgi'
+    update_cache: yes
+    state: present
+  sudo: yes
+
 - name: install uwsgi
   apt:
     name: "{{ item }}"
