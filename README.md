@@ -16,3 +16,7 @@ Role Variables
 Dependencies
 ============
 - [django-site](https://github.LucianU/ansible-django-site)
+
+License
+=======
+BSD
