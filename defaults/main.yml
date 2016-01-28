@@ -1,6 +1,3 @@
 ---
-uwsgi_config_dest: /etc/uwsgi/apps-available/{{ site_repo_name }}.ini
-uwsgi_django_settings: "{{ site_django_settings }}"
-uwsgi_socket: /run/uwsgi/app/{{ site_repo_name }}/socket
-uwsgi_module: "{{ site_repo_name }}.wsgi"
-uwsgi_venv: "{{ site_virtualenv }}"
+uwsgi_app_config: uwsgi.ini.j2
+uwsgi_socket: /run/uwsgi/app/{{ uwsgi_app_name }}/socket

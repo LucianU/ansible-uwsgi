@@ -6,16 +6,12 @@ Role Variables
 ==============
 | Variable | Description | Default value |
 |----------|-------------|---------------|
-|`uwsgi_config_dest`| location of the uwsgi config file for the Django site | `/etc/uwsgi/apps-available/{{ site_repo_name }}.ini` |
-|`uwsgi_django_settings`| settings module of the Django site | `{{ site_django_settings }}` |
-|`uwsgi_module`| wsgi module of the Django site | `{{ site_repo_name }}.wsgi` |
-|`uwsgi_socket`| domain socket where uwsgi will listen for requests | `/run/uwsgi/app/{{ site_repo_name }}/socket` |
-|`uwsgi_venv`| Django site's virtual env | `{{ site_virtualenv }}` |
-
+|`uwsgi_app_name`| Name of the uwsgi app | `none` |
+|`uwsgi_socket`| Domain socket where uwsgi will listen for requests | `/run/uwsgi/app/{{ uwsgi_app_name }}/socket` |
 
 Dependencies
 ============
-- [django-site](https://github.LucianU/ansible-django-site)
+none
 
 License
 =======
