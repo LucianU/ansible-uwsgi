@@ -19,8 +19,6 @@
   template:
     src: "{{ uwsgi_app_config }}"
     dest: /etc/uwsgi/apps-available/{{ uwsgi_app_name }}.ini
-    owner: "{{ uwsgi_owner }}"
-    group: "{{ uwsgi_group }}"
   notify:
     - restart uwsgi
   sudo: yes
