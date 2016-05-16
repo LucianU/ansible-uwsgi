@@ -2,6 +2,8 @@
 socket = {{ uwsgi_socket }}
 master = true
 processes = 4
+enable-threads = true
+single-interpreter = true
 max-requests = 1000
 harakiri = 30
 post-buffering = 8192
