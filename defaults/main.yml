@@ -1,5 +1,7 @@
 ---
+uwsgi_app_name: "{{ site_dir_name }}"
 uwsgi_app_config: uwsgi.ini.j2
+uwsgi_django_settings: "{{ uwsgi_app_name }}.settings"
 uwsgi_module: "{{ uwsgi_app_name }}.wsgi"
 uwsgi_socket: /run/uwsgi/app/{{ uwsgi_app_name }}/socket
 uwsgi_venv: "{{ site_virtualenv }}"
